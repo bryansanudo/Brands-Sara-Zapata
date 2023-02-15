@@ -9,21 +9,21 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
   const links = [
     {
       id: 1,
-      link: "",
+      link: "https://sarazapata.vercel.app/",
       src: logoSara,
       brand:
         "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#6057ca] hover:shadow-[#6057ca] duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
       id: 2,
-      link: "",
+      link: "https://sara-madwax.vercel.app/",
       src: logoMdwx,
       brand:
         "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#29fd04] hover:shadow-[#29fd04]   duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
       id: 3,
-      link: "",
+      link: "#",
       src: logoJmarioCouture,
       brand:
         "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#fff] hover:shadow-[#fff] duration-300  cursor-pointer hover:shadow-xl shadow-md",
@@ -37,7 +37,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
           <div className="hidden lg:flex items-center">
             <ul className="flex gap-10">
               {links.map(({ id, link, src, brand }) => (
-                <a key={id} href={link} target="_blank" rel="noreferrer">
+                <a key={id} href={link}>
                   <div>
                     <img src={src} alt="" className={brand} />
                   </div>
@@ -66,8 +66,6 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
               key={id}
               onClick={() => setIsMenuShown(!isMenuShown)}
               href={link}
-              target="_blank"
-              rel="noreferrer"
             >
               <img src={src} alt="" className={brand} />
             </a>
