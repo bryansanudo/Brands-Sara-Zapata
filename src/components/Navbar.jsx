@@ -12,21 +12,21 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
       link: "",
       src: logoSara,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#6057ca] hover:shadow-[#6057ca] duration-300 cursor-pointer hover:shadow-xl shadow-md",
+        "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#6057ca] hover:shadow-[#6057ca] duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
-      id: 1,
+      id: 2,
       link: "",
       src: logoMdwx,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#29fd04] hover:shadow-[#29fd04]   duration-300 cursor-pointer hover:shadow-xl shadow-md",
+        "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#29fd04] hover:shadow-[#29fd04]   duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
-      id: 1,
+      id: 3,
       link: "",
       src: logoJmarioCouture,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#fff] hover:shadow-[#fff] duration-300  cursor-pointer hover:shadow-xl shadow-md",
+        "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#fff] hover:shadow-[#fff] duration-300  cursor-pointer hover:shadow-xl shadow-md",
     },
   ];
 
@@ -52,15 +52,6 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
           >
             {isMenuShown ? <FaTimes size={30} /> : <FaBars size={30} />}
           </div>
-          {/* <Link to="">
-            <div>
-              <img
-                src={logoSara}
-                alt=""
-                className="rounded-full object-cover w-16 h-16 hover:scale-110 duration-300 shadow-lg shadow-thOrange"
-              />
-            </div>
-          </Link> */}
         </div>
       </div>
 
@@ -69,21 +60,19 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
           isMenuShown ? "top-24 rounded-b-2xl opacity-95" : "top-[-100%]"
         }`}
       >
-        <ul>
-          {links.map(({ id, link }) => (
+        <div className="flex flex-col gap-5">
+          {links.map(({ id, link, src, brand }) => (
             <a
-              onClick={() => setIsMenuShown(!isMenuShown)}
-              to={link}
-              smooth
-              duration={500}
               key={id}
+              onClick={() => setIsMenuShown(!isMenuShown)}
+              href={link}
+              target="_blank"
+              rel="noreferrer"
             >
-              <li className="p-4 uppercase cursor-pointer duration-300 hover:text-thPrimary">
-                {link}
-              </li>
+              <img src={src} alt="" className={brand} />
             </a>
           ))}
-        </ul>
+        </div>
       </div>
     </>
   );

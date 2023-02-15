@@ -21,7 +21,7 @@ const HeroSection = ({ isMenuShown }) => {
   return (
     <div
       name="inicio"
-      className="flex items-end justify-center h-[60vh] w-full md:h-screen text-center   "
+      className="flex items-end justify-center h-[70vh] w-full md:h-screen text-center   "
     >
       <video
         ref={videoRef}
