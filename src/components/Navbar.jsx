@@ -12,21 +12,21 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
       link: "",
       src: logoSara,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#c539ac] hover:shadow-[#6057ca] duration-300 shadow-xl cursor-pointer",
+        "rounded-full object-cover w-40 h-40 shadow-[#6057ca] hover:shadow-[#6057ca] duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
       id: 1,
       link: "",
       src: logoMdwx,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#29fd04] hover:shadow-[#6057ca]   duration-300 shadow-xl cursor-pointer",
+        "rounded-full object-cover w-40 h-40 shadow-[#29fd04] hover:shadow-[#29fd04]   duration-300 cursor-pointer hover:shadow-xl shadow-md",
     },
     {
       id: 1,
       link: "",
       src: logoJmarioCouture,
       brand:
-        "rounded-full object-cover w-40 h-40 shadow-[#fff] hover:shadow-[#6057ca] duration-300 shadow-xl cursor-pointer",
+        "rounded-full object-cover w-40 h-40 shadow-[#fff] hover:shadow-[#fff] duration-300  cursor-pointer hover:shadow-xl shadow-md",
     },
   ];
 
@@ -48,7 +48,7 @@ const Navbar = ({ isMenuShown, setIsMenuShown }) => {
 
           <div
             onClick={() => setIsMenuShown(!isMenuShown)}
-            className="block lg:hidden cursor-pointer"
+            className="block lg:hidden cursor-pointer "
           >
             {isMenuShown ? <FaTimes size={30} /> : <FaBars size={30} />}
           </div>
