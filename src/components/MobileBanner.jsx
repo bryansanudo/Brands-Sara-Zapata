@@ -10,7 +10,7 @@ const MobileBanner = () => {
   const links = [
     {
       id: 1,
-      link: "https://sara-marcas.vercel.app/",
+      link: "https://sarazapata.vercel.app/",
       src: logoSara,
       brand:
         "rounded-full object-cover w-20 h-20 md:w-40 md:h-40 shadow-[#6057ca] hover:shadow-[#6057ca] duration-300 cursor-pointer hover:shadow-xl shadow-md",
